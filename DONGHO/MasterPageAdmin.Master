@@ -1,0 +1,139 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterPageAdmin.master.cs" Inherits="DONGHO.MasterPageAdmin" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>Quản lý thông tin</title>
+    <link rel="stylesheet" href="CSS/bootstrap.min.css" />
+    <script src="Js/bootstrap.min.js"></script>
+    <script src="Js/jquery-3.3.1.min.js"></script>
+    <style type="text/css">
+        * {
+            margin: 0 auto;
+            box-sizing: border-box;
+            font-size: 14px;
+        }
+
+        h1,
+        h2, h3, h4 {
+            padding: 25px 0;
+            margin: auto;
+            text-align: center;
+        }
+
+        #gvtaikhoan {
+            width: 100%;
+        }
+
+        input[value="Xóa"],
+        input[value="Hủy bỏ"] {
+            background-color: #d9534f;
+            border-color: #d43f3a;
+        }
+
+        .auto-style1 {
+            width: 100%;
+        }
+
+        .auto-style2 {
+            width: 100%;
+        }
+
+        .auto-style3 {
+            height: 50px;
+            background-color: lavender;
+            width: 865px;
+        }
+        
+        .auto-style4 {
+            width: 82%;
+        }
+        
+    </style>
+    <link href="CSS/styleadmin.css" type="text/css" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="tieude" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+
+        <table class="auto-style1">
+            <tr>
+
+                <td class="auto-style2" colspan="2">
+                    <asp:Image ID="Image1" runat="server" ImageUrl="~/image/banner.jpg" Width="100%" Height="200px"/>
+                </td>
+            </tr>
+            <tr>
+
+                <td class="auto-style3" colspan="2">
+                    <asp:LinkButton CssClass="link" ID="LinkButton1" runat="server" PostBackUrl="~/QuanLyDanhMuc.aspx" CausesValidation="False">QUẢN LÝ DANH MỤC</asp:LinkButton>
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    <asp:LinkButton CssClass="link" ID="LinkButton2" runat="server" PostBackUrl="~/QuanLyHangSX.aspx" CausesValidation="False">QUẢN LÝ HÃNG SX</asp:LinkButton>
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    <asp:LinkButton CssClass="link" ID="LinkButton3" runat="server" PostBackUrl="~/QuanLyDonHang.aspx" CausesValidation="False">QUẢN LÝ ĐƠN HÀNG</asp:LinkButton>
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    <asp:LinkButton CssClass="link" ID="LinkButton4" runat="server" PostBackUrl="~/QuanLyDongHo.aspx" CausesValidation="False">QUẢN LÝ ĐỒNG HỒ</asp:LinkButton>
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    <asp:LinkButton CssClass="link" ID="LinkButton5" runat="server" PostBackUrl="~/QuanLyTaiKhoan.aspx" CausesValidation="False">QUẢN LÝ TÀI KHOẢN</asp:LinkButton>
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    <asp:LinkButton CssClass="link" ID="LinkButton6" runat="server" PostBackUrl="~/QuanLyGopY.aspx" CausesValidation="False">QUẢN LÝ GÓP Ý</asp:LinkButton>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="cot">
+                    <div class="ct">
+                        <asp:Image ID="Image2" runat="server" ImageUrl="~/image/admin.png" />
+                        <asp:Label ID="lblname" runat="server" Font-Bold="True" Font-Size="Medium"></asp:Label>
+                        <br />
+                        <br />
+                        <asp:Button ID="Button1" runat="server" BackColor="#990000" Font-Bold="True" ForeColor="White" Height="35px" OnClick="Button1_Click" Text="ĐĂNG XUẤT" Width="134px" CausesValidation="False" />
+                    </div>
+                </td>
+                <td class="auto-style4" rowspan="8">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="cot">
+                    &nbsp;</td>
+            </tr>
+
+            <tr>
+                <td class="cot">
+                    &nbsp;</td>
+            </tr>
+
+            <tr>
+                <td class="cot">
+                    &nbsp;</td>
+            </tr>
+
+            <tr>
+                <td class="cot">
+                    &nbsp;</td>
+            </tr>
+
+            <tr>
+                <td class="cot">
+                    &nbsp;</td>
+            </tr>
+
+            <tr>
+                <td class="cot">
+                    &nbsp;</td>
+            </tr>
+
+            <tr>
+                <td class="cot">
+                    &nbsp;</td>
+            </tr>
+        </table>
+    </form>
+    <script src="https://kit.fontawesome.com/084bd53266.js"></script>
+</body>
+</html>

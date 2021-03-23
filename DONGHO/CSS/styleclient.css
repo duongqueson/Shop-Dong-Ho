@@ -1,0 +1,115 @@
+﻿* {
+    padding: 0px;
+    margin: 0px;
+}
+
+.header {
+    height: 45px;
+    background-color: brown;
+}
+
+#lbltieude {
+    color: white;
+    margin-left: 100px;
+}
+
+#lbtndangnhap {
+    float: right;
+    margin-right: 165px;
+    color: white;
+    text-decoration: none;
+}
+
+#lbtndangky {
+    float: right;
+    margin-right: 10px;
+    color: white;
+    text-decoration: none;
+}
+
+#lbtntrangchu {
+    position: absolute;
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    top: 15px;
+    left: 100px;
+}
+
+#lbtndanhmuc {
+    position: absolute;
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    top: 15px;
+    left: 230px;
+}
+
+    #lbtntrangchu:hover, #lbtndangnhap:hover, #lbtndanhmuc:hover, #lbtndangky:hover, #lbtngiohang:hover {
+        color: coral;
+    }
+
+.menu {
+    background-color: beige;
+    height: 46px;
+    position: relative;
+}
+
+#txttimkiem {
+    width: 270px;
+    height: 25px;
+    border-radius: 20px;
+    margin-left: 200px;
+    position: absolute;
+    top: 10px;
+    left: 510px;
+}
+
+.btntimkiem {
+    border: none;
+    width: 25px;
+    height: 22px;
+    margin-left: -39px;
+    border-radius: 50%;
+    background-color: white;
+}
+
+.footer {
+    height: 200px;
+    background-color: brown;
+}
+
+.footer-bot {
+    padding-left: 100px;
+}
+
+
+#imgtimkiem {
+    width: 15px;
+    position: absolute;
+    top: 16px;
+    left: 956px;
+}
+
+#giohang {
+    width: 32px;
+    position: absolute;
+    top: 7px;
+    right: 120px;
+}
+
+#lbtngiohang {
+    position: absolute;
+    top: 14px;
+    right: 165px;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+#imgtaikhoan {
+    width: 28px;
+    position: absolute;
+    top: 10px;
+    right: 130px;
+}

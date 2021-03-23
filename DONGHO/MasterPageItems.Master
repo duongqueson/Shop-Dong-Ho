@@ -1,0 +1,199 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterPageItems.master.cs" Inherits="DONGHO.MasterPageItems" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>danh mục sản phẩm</title>
+    <link href="CSS/bootstrap.min.css" type="text/css" rel="stylesheet" />
+    <link href="CSS/styleitems.css" type="text/css" rel="stylesheet" />
+    <script src="Js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="Js/jquery-3.3.1.min.js" type="text/javascript"></script>
+    <script src="../Js/jquery-3.3.1.slim.min.js" type="text/javascript"></script>
+    <script src="../Js/popper.min.js"></script>
+    <style type="text/css">
+        .auto-style1 {
+            width: 100%;
+        }
+
+        .auto-style6 {
+            width: 448px;
+        }
+
+        .auto-style8 {
+            width: 409px;
+            padding-left: 78px;
+        }
+
+        .auto-style10 {
+            left: 231px;
+            top: 15px;
+        }
+
+        .auto-style11 {
+            top: 16px;
+        }
+
+        .table-left {
+            position: relative;
+            width:30%;
+        }
+        .table-right{
+            width:70%;
+        }
+
+        #lbldanhmuc {
+            position: absolute;
+            top: 20px;
+        }
+
+        #dlDanhMuc {
+            position: absolute;
+            top: 70px;
+        }
+
+        a:hover {
+            color: darkorange;
+        }
+
+        a {
+            color: mistyrose;
+        }
+
+        #link {
+            position: absolute;
+            top: 450px;
+        }
+        #Label1{
+            position:absolute;
+            top:400px;
+        }
+        .btnlink:hover{
+            color:coral;
+        }
+        #HyperLink1{
+            text-decoration-style:none;
+        }
+        #LinkButton1{
+            float:right;
+            padding-right:100px;
+        }
+    </style>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+            <table class="auto-style1">
+            <tr class="header">
+                <td>
+                    <asp:Label ID="lbltieude" runat="server" Text="HỆ THỐNG ĐỒNG HỒ  CHÍNH HÃNG UY TÍN" ForeColor="White"></asp:Label>
+                    <asp:LinkButton ID="LinkButton1" runat="server" Font-Bold="True" Font-Underline="False" ForeColor="White" OnClick="LinkButton1_Click">Đăng xuất</asp:LinkButton>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <asp:Image ID="imgbanner" runat="server" ImageUrl="~/image/banner.jpg" Width="100%" Height="200px" />
+                </td>
+            </tr>
+            <tr>
+                <td class="menu">
+                    <asp:LinkButton ID="lbtntrangchu" runat="server" PostBackUrl="~/TrangChu.aspx">TRANG CHỦ</asp:LinkButton>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <asp:LinkButton ID="lbtndanhmuc" runat="server" PostBackUrl="~/XemDanhMucDongHo.aspx" CssClass="auto-style10">DANH MỤC SẢN PHẨM</asp:LinkButton>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <asp:TextBox ID="txttimkiem" runat="server" placeholder="Tìm kiếm..."></asp:TextBox>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <asp:ImageButton ID="imgtimkiem" runat="server" ImageUrl="~/image/search.jpg" CssClass="auto-style11" />
+                    <asp:LinkButton ID="lbtngiohang" runat="server" PostBackUrl="~/GioHang.aspx">Giỏ Hàng</asp:LinkButton>
+                    <asp:Image ID="giohang" runat="server" ImageUrl="~/image/giohang.png" />
+                </td>
+            </tr>
+            <tr>
+
+                <td class="content">
+                    <table class="auto-style1">
+                        <tr>
+                            <td class="table-left">
+                                <asp:Label ID="lbldanhmuc" runat="server" Font-Bold="True" Font-Italic="False" Font-Overline="False" Font-Size="20px" Font-Strikeout="False" Font-Underline="False" Text="DANH MỤC ĐỒNG HỒ" CssClass="auto-style12"></asp:Label>
+                                <asp:SqlDataSource ID="sqldanhmuc" runat="server" ConnectionString="<%$ ConnectionStrings:DONGHOConnectionString %>" SelectCommand="SELECT * FROM [DANHMUC]"></asp:SqlDataSource>
+                                <asp:DataList ID="dlDanhMuc" runat="server" DataKeyField="ID" DataSourceID="sqldanhmuc" Width="86%" BorderColor="#E7E7FF" BorderStyle="None" BorderWidth="1px" CellPadding="3" GridLines="Horizontal" Font-Bold="True" Font-Size="Large" Font-Strikeout="False" Font-Underline="False" CssClass="auto-style13" Style="left: 1px; top: 70px">
+                                    <AlternatingItemStyle BackColor="#666666" />
+                                    <EditItemStyle Font-Bold="False" Font-Size="Large" ForeColor="Black" />
+                                    <FooterStyle />
+                                    <HeaderStyle Font-Bold="True" VerticalAlign="Middle" />
+                                    <ItemStyle BackColor="#009999" ForeColor="#800000" BorderStyle="Double" Font-Bold="False" Height="50px" />
+                                    <ItemTemplate>
+                                        <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl='<%# Eval("ID","~/DanhSachDongHoTheoDanhMuc.aspx?IDDANHMUC={0}") %>'><%# Eval("TENDM") %></asp:HyperLink>
+                                    </ItemTemplate>
+                                    <SelectedItemStyle />
+                                </asp:DataList>
+                                <asp:Label ID="Label1" runat="server" Font-Bold="True" Font-Overline="False" Font-Size="19px" Font-Strikeout="False" Font-Underline="False" Text="Tìm kiếm theo giá" CssClass="auto-style12"></asp:Label>
+
+                                <div id="link" class="auto-style14">
+                                    <asp:LinkButton ID="lbtnDuoi2" runat="server" PostBackUrl="~/Duoi2Tr.aspx" Font-Bold="True" Font-Underline="False" ForeColor="#006666" Font-Size="Large" CssClass="btnlink">Dưới 2 triệu</asp:LinkButton>
+                                    <br />
+                                    <asp:LinkButton ID="lbTu2den3" runat="server" PostBackUrl="~/Tu2den3Tr.aspx" Font-Bold="True" Font-Underline="False" ForeColor="#006666" Font-Size="Large" CssClass="btnlink">Từ 2 đến 3 triệu</asp:LinkButton>
+                                    <br />
+                                    <asp:LinkButton ID="lbTu3den5" runat="server" PostBackUrl="~/Tu3den5Tr.aspx" Font-Bold="True" Font-Underline="False" ForeColor="#006666" Font-Size="Large" CssClass="btnlink">Từ 3 đến 5 triệu</asp:LinkButton>
+                                    <br />
+                                    <asp:LinkButton ID="lbTu5den10" runat="server" PostBackUrl="~/Tu5den10Tr.aspx" Font-Bold="True" Font-Underline="False" ForeColor="#006666" Font-Size="Large" CssClass="btnlink">Từ 5 đến 10 triệu</asp:LinkButton>
+                                    <br />
+                                    <asp:LinkButton ID="lbTren10" runat="server" PostBackUrl="~/Tren10Tr.aspx" Font-Bold="True" Font-Underline="False" ForeColor="#006666" Font-Size="Large" CssClass="btnlink">Trên 10 triệu</asp:LinkButton>
+                                </div>
+
+                            </td>
+                            <td class="table-right" style="height: 650px">
+                                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                                </asp:ContentPlaceHolder>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td class="footer">
+                    <table>
+                        <tr>
+                            <td class="auto-style8">
+                                <br />
+                                <asp:Image ID="Image3" runat="server" ImageUrl="~/image/logodh.png" />
+                            </td>
+                            <td class="auto-style6">
+                                <asp:Label ID="Label2" runat="server" Font-Bold="True" Text="HỆ THỐNG SHOWROM"></asp:Label>
+                                
+                                <asp:Label ID="Label3" runat="server" Text="Địa chỉ 1 : 210 Bà Triệu, Hai Bà Trưng, Hà Nội"></asp:Label>
+                                <br />
+                                <asp:Label ID="Label4" runat="server" Text="Địa chỉ 2: 70 Tuệ Tĩnh, Hai Bà Trưng, Hà Nội"></asp:Label>
+                                <br />
+                                <asp:Label ID="Label5" runat="server" Text="Địa chỉ 3 : 772 Sư Vạn Hạnh, Q.10, HCM"></asp:Label>
+                            </td>
+                            <td>
+                                <asp:Label ID="Label6" runat="server" Font-Bold="True" Text="HỖ TRỢ KHÁCH HÀNG"></asp:Label>
+                                <br />
+                                <asp:Label ID="Label7" runat="server" Text="Chính sách bảo hành và đổi hàng"></asp:Label>
+                                <br />
+                                <asp:Label ID="Label8" runat="server" Text="Cách thức mua hàng"></asp:Label>
+                                <br />
+                                <asp:Label ID="Label9" runat="server" Text="Chính sách bảo mật"></asp:Label>
+                                <br />
+                                <asp:LinkButton ID="LinkButton2" runat="server" PostBackUrl="~/GopY.aspx" ForeColor="Black">Hỏi đáp - Góp ý</asp:LinkButton>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" class="footer-bot">
+                                <br />
+                                <asp:Label ID="Label10" runat="server" Font-Bold="True" Text="CỬA HÀNG ĐỒNG HỒ TRUNG ANH"></asp:Label>
+                                <br />
+                                <asp:Label ID="Label11" runat="server" Text="OFFICE: 68 Ngũ Nhạc, P. Thanh Trì, Q.Hoàng Mai - Hà Nội."></asp:Label>
+                                <br />
+                                <asp:Label ID="Label12" runat="server" Text="Mã số doanh nghiệp: 0108111795 Do sở kế hoạch đầu tư TP Hà Nội cấp ngày 02/01/2018."></asp:Label>
+                            </td>
+                            <td>&nbsp;</td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

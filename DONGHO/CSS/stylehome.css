@@ -1,0 +1,57 @@
+﻿
+.containt {
+    padding-left: 100px;
+    height: auto;
+    margin: 0 auto;
+}
+
+.slide {
+    width: 95%;
+    margin-top: 35px;
+}
+
+.product {
+    width: 100%;
+    margin: 3px;
+    padding: 3px;
+    text-align: center;
+}
+
+h1 {
+    background: brown;
+    height: 50px;
+    width: 90% !important;
+    text-align: center;
+}
+
+.datalist {
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.containerProduct {
+    margin-left: 10px;
+    margin-right: 10px;
+    text-align: center;
+    margin: 3px;
+    padding: 3px;
+}
+
+    .containerProduct:hover {
+        transition: 0.3s;
+        box-shadow: 3px 5px 2px #BDBDBD;
+        border: 1px solid #BDBDBD;
+    }
+
+        .containerProduct:hover .button {
+            background: #4cff00;
+        }
+
+.button {
+    height: 25px;
+    padding-top: 2px;
+    background: brown;
+    color: #ffffff;
+    margin-left: 10px;
+    margin-right: 10px;
+}

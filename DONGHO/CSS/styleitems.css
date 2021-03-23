@@ -1,0 +1,169 @@
+﻿* {
+    padding: 0px;
+    margin: 0px;
+}
+
+.header {
+    height: 45px;
+    background-color: brown;
+}
+
+#lbltieude {
+    margin-left: 100px;
+}
+
+#lbdangnhap {
+    float: right;
+    margin-right: 165px;
+    color: white;
+    text-decoration: none;
+}
+
+#lbdangky {
+    float: right;
+    margin-right: 10px;
+    color: white;
+    text-decoration: none;
+}
+
+#lbtntrangchu {
+    position: absolute;
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    top: 15px;
+    left: 100px;
+}
+
+#lbtndanhmuc {
+    position: absolute;
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    top: 15px;
+    left: 230px;
+}
+
+    #lbtntrangchu:hover, #lbtndangnhap:hover, #lbtndanhmuc:hover, #lbtndangky:hover, #lbtngiohang:hover {
+        color: coral;
+    }
+
+.menu {
+    background-color: beige;
+    height: 46px;
+    position: relative;
+}
+
+#txttimkiem {
+    width: 270px;
+    height: 25px;
+    border-radius: 20px;
+    margin-left: 200px;
+    position: absolute;
+    top: 10px;
+    left: 510px;
+}
+
+.btntimkiem {
+    border: none;
+    width: 25px;
+    height: 22px;
+    margin-left: -39px;
+    border-radius: 50%;
+    background-color: white;
+}
+
+.footer {
+    height: 200px;
+    background-color: brown;
+}
+
+.footer-bot {
+    padding-left: 100px;
+}
+
+#imgbanner {
+    margin-left: 0px;
+}
+
+#imgtimkiem {
+    width: 15px;
+    position: absolute;
+    top: 16px;
+    left: 956px;
+}
+
+#giohang {
+    width: 32px;
+    position: absolute;
+    top: 7px;
+    right: 120px;
+}
+
+#lbtngiohang {
+    position: absolute;
+    top: 14px;
+    right: 165px;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+.content {
+    padding-left: 100px;
+    height: 150px;
+}
+
+#imgtk {
+    width: 28px;
+    position: absolute;
+    top: 10px;
+    right: 130px;
+}
+
+.table-left {
+    height: 22px;
+    width: 305px;
+    position: relative;
+}
+
+#txtSearch {
+    height: 25px;
+    width: 260px;
+    position: absolute;
+    top: 10px;
+}
+
+.linkbtn {
+    text-decoration: none;
+    color: darkred;
+    font-weight: bold;
+}
+
+    .linkbtn:hover {
+        color: aquamarine;
+    }
+
+hr {
+    width: 262px;
+}
+
+#imgSearch {
+    background-color: chocolate;
+    width: 24px;
+    position: absolute;
+    top: 18px;
+    right: 41px;
+    padding: 5px;
+}
+
+    #imgSearch:hover {
+        background-color: aquamarine;
+    }
+
+#lbldanhmucmuc {
+    position: absolute;
+    font-size: 20px;
+    font-weight: bold;
+    top: 55px;
+}

@@ -1,0 +1,106 @@
+﻿* {
+    padding: 0px;
+    margin: 0px;
+}
+
+.link {
+    margin-left: 65px;
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+    .link:hover {
+        color: coral;
+    }
+
+.banner {
+    background-color: brown;
+}
+
+#Image1 {
+    width: 90px;
+    background-color: brown;
+}
+
+.menu {
+    height: 50px;
+    background-color: lavender;
+}
+
+.form-group {
+    text-align: left;
+    margin: 0;
+}
+
+    .form-group.required label:after {
+        content: '(*)';
+        color: red;
+        margin-left: 5px;
+    }
+
+    .form-group .control-label {
+        color: #2A3F54;
+    }
+
+    .form-group .control-label,
+    .form-group div {
+        padding-top: 5px;
+        font-weight: normal;
+    }
+
+    .form-group .control-label {
+        text-align: right;
+    }
+
+.field-product-file input,
+.field-productcategory-file input {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}
+
+.tab-content {
+    margin: auto;
+    width: 80%;
+    text-align: center;
+}
+
+.clear-fix {
+    clear: both;
+}
+
+table {
+    text-align: center;
+    width: 80%;
+    margin: auto;
+}
+
+td,
+th {
+    padding: 5px 10px;
+    text-align: center !important;
+}
+
+.btn {
+    border: 1px solid #2e6da4;
+    color: #fff;
+    padding: 6px 12px;
+    background: #337ab7;
+    border-radius: 4px;
+}
+
+input[type=text] {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #333;
+    border-radius: 4px;
+}
+
+input[type=button]:hover,
+input[type=submit]:hover {
+    color: #fff !important;
+}
